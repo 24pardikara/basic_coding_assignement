@@ -1,0 +1,179 @@
+#function
+def msg():
+    print("hello world")
+msg()
+
+
+
+
+
+def msg():
+    val1 = int(input("Enter first value: "))
+    val2 = int(input("Enter second value: "))
+    print(val1+val2)
+msg()
+
+
+
+
+
+
+def msg():
+    val1 = int(input("Enter first value: "))
+    val2 = int(input("Enter second value: "))
+    return(val1+val2)
+print(msg())
+
+
+
+
+
+
+def msg():
+    val1 = int(input("Enter first value: "))
+    val2 = int(input("Enter second value: "))
+    return(val1+val2)
+x = msg()
+print("result:- ",x)
+
+
+
+
+
+
+
+"in python we can return multiple value in same time"
+
+
+
+
+
+
+
+def msg():
+    val1 = int(input("Enter first value: "))
+    val2 = int(input("Enter second value: "))
+    sum=val1+val2
+    sub=val1-val2
+    div=val1*val2
+    return sum, sub, div
+x = msg()
+print("result:- ",x)
+
+
+
+
+
+
+
+
+
+types of arguments we can pass:_
+	positional arguments
+	keyword arguments
+	default arguments
+	variable length arguments / variable number of arguments
+
+
+
+
+
+
+
+
+#positional argument
+def personalInfo(fname, lname):
+    print("first name: ", fname)
+    print("last name: ", lname)
+personalInfo("Prashant", "Jha")
+
+
+
+
+
+
+#keyword argument
+def personalInfo(fname, lname):
+    print("first name: ", fname)
+    print("last name: ", lname)
+    
+fname = "Prashant"
+lname = "Jha"
+personalInfo(fname, lname)
+
+
+
+
+
+
+
+
+#kdefault argument
+def cityName(city="Nagpur"):
+    print("city name: ", city)
+
+cityName("Mumbai")
+cityName("Delhi")
+cityName()
+
+
+
+
+
+
+
+#varible length argument
+def cityName(*city):
+    print("city name:", city)
+
+cityName("Mumbai", "Nagpur", "Pune", "Nashik")
+
+
+
+
+
+
+def login():
+    username = input("Enter username: ")
+    password = input("Enter password:")
+    if username == password:
+        print("login successfully !")
+    else:
+        print("invalid credentials")
+login()
+
+
+
+
+
+
+def login():
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    while username!=password:
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+    print("login successfully")
+   
+login()
+
+
+
+
+
+
+
+
+
+def searchValue(target):
+    for i in range(len(mylist)): #length
+        if mylist[i] == target:
+            return i
+        return -1
+mylist=[4,2,7,8,5,4,1]
+target = 7
+x = searchValue(target)
+if x != -1:
+    print("value found at index number = ",x)
+else:
+    print("Value found at index number= ",x)
